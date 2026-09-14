@@ -32,6 +32,16 @@
             // output: pages after : 400 -> pass by value -> the original value is not changed. 
             //Using copy of the value of pages variable not the original.
             #endregion
+
+            #region Q6
+            double[] pricesQ06 = {25.5, 40.0};
+            ApplyDiscount(pricesQ06);
+            // output: 20.5 
+            Console.WriteLine(pricesQ06[0]);
+            // output: 20.5 -> Array reference is passed by value -> the original value is changed Cuz the reference of the array is passed to the method.
+            //So the two variables pricesQ06 in the Main method and pricesQ06 in the ApplyDiscount method are pointing to the same array in memory.
+            //So when we change the value of pricesQ06[0] in the ApplyDiscount method, it also changes the value of pricesQ06[0] in the Main method.
+            #endregion
         }
 
         #region Q3 Method
@@ -54,6 +64,15 @@
             pages += 50;
             Console.WriteLine($"Total pages after bonus: {pages}");
         }
+        #endregion
+
+        #region Q6 Method
+        public static void ApplyDiscount(double[] pricesQ06)
+        {
+            pricesQ06[0] -= 5;
+            Console.WriteLine(pricesQ06[0]);
+        }
+
         #endregion
     }
 }
