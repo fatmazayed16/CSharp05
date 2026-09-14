@@ -18,12 +18,24 @@
             // Call the PrintWelcomeMessage method in the Main method.
             PrintWelcomeMessage();
             #endregion
+
+            #region Q4
+            // Call the PrintBookTitle method in the Main method.
+            PrintBookTitle("Clean Code");
+            #endregion
         }
 
         #region Q3 Method
         public static void PrintWelcomeMessage()
         {
             Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
+
+        #region Q4 Method
+        public static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book Title: {title}");
         }
         #endregion
     }
