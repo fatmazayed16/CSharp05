@@ -80,6 +80,11 @@
             #region Q11
             PrintBookInfo(pages: 500, title: "New title");
             #endregion
+
+            #region Q12
+            PrintAllTitles("Clean Code", "Refactoring", "The Pragmatic Programmer");
+            // Passes three book titles using params.
+            #endregion
         }
 
         #region Q3 Method
@@ -152,6 +157,17 @@
         }
         #endregion
 
-        
+        #region Q12 Method
+        public static void PrintAllTitles(params string[] titles)
+        {
+            foreach(string title in titles)
+            {
+                Console.WriteLine(title);
+
+            }
+        }
+        #endregion
+
+
     }
 }
