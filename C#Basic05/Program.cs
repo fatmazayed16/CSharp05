@@ -42,6 +42,16 @@
             //So the two variables pricesQ06 in the Main method and pricesQ06 in the ApplyDiscount method are pointing to the same array in memory.
             //So when we change the value of pricesQ06[0] in the ApplyDiscount method, it also changes the value of pricesQ06[0] in the Main method.
             #endregion
+
+            #region Q7
+            int pagesQ7 = 400;
+            AddBonusPagesQ7(ref pagesQ7);
+            // output: Total pages after bonus: 450 
+            Console.WriteLine(pagesQ7);
+            //Output: 450 -> pass by reference -> the original value is changed.
+            //Using the original pagesQ7 variable not the copy of the value.
+            //So when we change the value of pagesQ7 in the AddBonusPagesQ7 method, it also changes the value of pagesQ7 in the Main method.
+            #endregion
         }
 
         #region Q3 Method
@@ -73,6 +83,14 @@
             Console.WriteLine(pricesQ06[0]);
         }
 
+        #endregion
+
+        #region Q7
+        public static void AddBonusPagesQ7(ref int pages)
+        {
+            pages += 50;
+            Console.WriteLine($"Total pages after bonus: {pages}");
+        }
         #endregion
     }
 }
