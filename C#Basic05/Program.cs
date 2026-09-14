@@ -23,6 +23,15 @@
             // Call the PrintBookTitle method in the Main method.
             PrintBookTitle("Clean Code");
             #endregion
+
+            #region Q5
+            int pages = 400;
+            AddBonusPages(pages);
+            // output: Total pages after bonus: 450 
+            Console.WriteLine(pages);
+            // output: pages after : 400 -> pass by value -> the original value is not changed. 
+            //Using copy of the value of pages variable not the original.
+            #endregion
         }
 
         #region Q3 Method
@@ -36,6 +45,14 @@
         public static void PrintBookTitle(string title)
         {
             Console.WriteLine($"Book Title: {title}");
+        }
+        #endregion
+
+        #region Q5 Method
+        public static void AddBonusPages(int pages)
+        {
+            pages += 50;
+            Console.WriteLine($"Total pages after bonus: {pages}");
         }
         #endregion
     }
