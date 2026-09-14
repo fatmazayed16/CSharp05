@@ -52,6 +52,15 @@
             //Using the original pagesQ7 variable not the copy of the value.
             //So when we change the value of pagesQ7 in the AddBonusPagesQ7 method, it also changes the value of pagesQ7 in the Main method.
             #endregion
+
+            #region Q8
+            double[] pricesQ08 = {25.5, 40.0}; 
+            ReplaceArray(ref pricesQ08);
+            Console.WriteLine(pricesQ08[2]);
+            Console.WriteLine(pricesQ08.Length);
+            // Array reference is passed by reference -> so the original array variable is updated to reference a new array.
+            // output: 3 -> the original value is changed.
+            #endregion
         }
 
         #region Q3 Method
@@ -85,11 +94,19 @@
 
         #endregion
 
-        #region Q7
+        #region Q7 Method
         public static void AddBonusPagesQ7(ref int pages)
         {
             pages += 50;
             Console.WriteLine($"Total pages after bonus: {pages}");
+        }
+        #endregion
+
+        #region Q8 Method
+        public static void ReplaceArray(ref double[] pricesQ08)
+        {
+            double[] newPrices = {10.0, 12.5, 15.0};
+            pricesQ08 = newPrices;
         }
         #endregion
     }
