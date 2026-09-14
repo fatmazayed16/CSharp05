@@ -61,6 +61,14 @@
             // Array reference is passed by reference -> so the original array variable is updated to reference a new array.
             // output: 3 -> the original value is changed.
             #endregion
+
+            #region Q9
+            string title = "Clean Code";
+            if (TryGetPrice(title, out double price))
+            {
+                Console.WriteLine(price);
+            }
+            #endregion
         }
 
         #region Q3 Method
@@ -107,6 +115,22 @@
         {
             double[] newPrices = {10.0, 12.5, 15.0};
             pricesQ08 = newPrices;
+        }
+        #endregion
+
+        #region Q9 Method
+        public static bool TryGetPrice(string title, out double price)
+        { 
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0.0;
+                return false;
+            }
         }
         #endregion
     }
