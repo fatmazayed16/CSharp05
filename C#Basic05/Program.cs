@@ -69,6 +69,13 @@
                 Console.WriteLine(price);
             }
             #endregion
+
+            #region Q10
+            PrintBookInfo("Clean Code");
+            // Uses the default value of pages -> 300.
+            PrintBookInfo("New title" ,400);
+            // Uses a specific value for pages -> 400.
+            #endregion
         }
 
         #region Q3 Method
@@ -131,6 +138,13 @@
                 price = 0.0;
                 return false;
             }
+        }
+        #endregion
+
+        #region Q10 Method
+        public static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"The title is: {title} and num of Pages  is : {pages}");
         }
         #endregion
     }
