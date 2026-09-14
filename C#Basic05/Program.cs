@@ -13,6 +13,18 @@
             int[,] shelfCopies = { { 3,5 },{1,4 } };
             Console.WriteLine(shelfCopies[1,0]);
             #endregion
+
+            #region Q3
+            // Call the PrintWelcomeMessage method in the Main method.
+            PrintWelcomeMessage();
+            #endregion
         }
+
+        #region Q3 Method
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
     }
 }
